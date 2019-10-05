@@ -1,0 +1,121 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API",
+		"_postman_id": "1f27487b-cf98-074c-edcf-faf7f3e1a052",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"request": {
+				"url": "http://localhost:3000/api/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Naranja\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "client",
+			"request": {
+				"url": "http://localhost:3000/api/client",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Diego\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "client",
+			"request": {
+				"url": "http://localhost:3000/api/client",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"url": "http://localhost:3000/api/product",
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "text/json; charset=utf-8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"url": "http://localhost:3000/api/order",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"client\": {\"_id\":\"5d97eeb2f3ea85174b9f0df0\"},\n\t\"orderProducts\":[\n\t\t{\n\t\t\t\"amount\":2,\n\t\t\t\"product\":{\"_id\": \"5d97f8780f1afd1f05dd8d05\"}\n\t\t},\n\t\t{\n\t\t\t\"amount\":1,\n\t\t\t\"product\":{\"_id\": \"5d97f8c52cf0ba1ff4de9a6c\"}\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"url": "http://localhost:3000/api/order/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "orders/:id",
+			"request": {
+				"url": "http://localhost:3000/api/client/5d97eeb2f3ea85174b9f0df0/orders",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
