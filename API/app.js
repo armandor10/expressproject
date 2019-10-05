@@ -1,3 +1,4 @@
+var cors = require('cors');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,20 +11,12 @@ var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api');
 
 var app = express();
+app.use(cors({
+  origin: '*'
+}));
 
 require('dotenv').config()
-/*
-// connection configurations
-const mc = mysql.createConnection({
-    host: process.env.DB_HOST,//'localhost',
-    user: process.env.DB_USER,
-    password:  process.env.DB_PASS,
-    database: process.env.DB_NAME
-});
- 
-// connect to database
-mc.connect();
-*/
+
 require('./models/client');//initialize mongoose schemas
 require('./models/product');
 require('./models/order');
